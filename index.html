@@ -12,13 +12,13 @@
             height: 70px;
             animation: spin 1s linear infinite;
         }
-
+          
         @keyframes spin {
             100% {
                 transform: rotate(360deg);
             }
         }
-
+          
         .center {
             position: absolute;
             top: 0;
@@ -33,7 +33,7 @@
 </head>
 
 <body background="co.jpg">
-    <div id="loader" class="center"></div>
+     <div id="loader" class="center"></div>
 
 
     <div class="a">
@@ -113,17 +113,17 @@
 
     </div>
     <script>
-        document.onreadystatechange = function () {
+        document.onreadystatechange = function() {
             if (document.readyState !== "complete") {
                 document.querySelector(
-                    "body").style.visibility = "hidden";
+                  "body").style.visibility = "hidden";
                 document.querySelector(
-                    "#loader").style.visibility = "visible";
+                  "#loader").style.visibility = "visible";
             } else {
                 document.querySelector(
-                    "#loader").style.display = "none";
+                  "#loader").style.display = "none";
                 document.querySelector(
-                    "body").style.visibility = "visible";
+                  "body").style.visibility = "visible";
             }
         };
     </script>
