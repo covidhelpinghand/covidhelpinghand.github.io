@@ -3,28 +3,35 @@
 <head>
     <title>Covid helping hand</title>
     <style>
-        #loader {
-            border: 12px solid #f3f3f3;
+        .loader {
+            border: 16px solid #f3f3f3;
             border-radius: 50%;
-            border-top: 12px solid #444444;
-            width: 70px;
-            height: 70px;
-            animation: spin 1s linear infinite;
+            border-top: 16px solid blue;
+            border-bottom: 16px solid blue;
+            width: 120px;
+            height: 120px;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
         }
-          
+
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
         @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
             100% {
                 transform: rotate(360deg);
             }
-        }
-          
-        .center {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
         }
     </style>
     <link rel="stylesheet" type="text/css" href="c.css">
@@ -32,7 +39,7 @@
 
 <body background="co.jpg">
     <div id="loader" class="center"></div>
-    
+
 
 
     <div class="a">
@@ -112,21 +119,21 @@
 
     </div>
     <script>
-        document.onreadystatechange = function() {
+        document.onreadystatechange = function () {
             if (document.readyState !== "complete") {
                 document.querySelector(
-                  "body").style.visibility = "hidden";
+                    "body").style.visibility = "hidden";
                 document.querySelector(
-                  "#loader").style.visibility = "visible";
+                    "#loader").style.visibility = "visible";
             } else {
                 document.querySelector(
-                  "#loader").style.display = "none";
+                    "#loader").style.display = "none";
                 document.querySelector(
-                  "body").style.visibility = "visible";
+                    "body").style.visibility = "visible";
             }
         };
     </script>
-   
+
 </body>
 
 </html>
