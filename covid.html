@@ -1,12 +1,38 @@
 <html>
 
 <head>
-    <title>Covid help_hand</title>
+    <title>Covid helping hand</title>
+        <style>
+        #loader {
+            border: 12px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 12px solid #444444;
+            width: 70px;
+            height: 70px;
+            animation: spin 1s linear infinite;
+        }
+          
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+          
+        .center {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    </style>
+    
     <link rel="stylesheet" type="text/css" href="c.css">
 </head>
 
 <body background="co.jpg">
-    
+     <div id="loader" class="center"></div>
 
 
     <div class="a">
@@ -45,11 +71,11 @@
 
     </div>
     <br>
+    <div>
+        <a href="#b" ><img src="im.png" width="100%"></a> 
+    </div>
     <br>
-
-    <img src="im.png" width="100%">
-    <br>
-    <h3 class="b" style="color: rgb(247, 247, 247); font-size: x-large;">Select your city below:-</h3>
+    <h3 class="b" id="b" style="color: rgb(247, 247, 247); font-size: x-large;">Select your city:-</h3>
     <div class="block">
         <h3 style="color: aliceblue;"><u>Uttar Pradesh</u></h3>
         <a style="color: aqua;" href="agra.html"><u>Agra</u></a><br>
@@ -57,7 +83,7 @@
         <a style="color: aqua;" href="Gorakhpur.html"><u>Gorakhpur</u></a><br>
         <a style="color: aqua;" href="kanpur.html"><u>Kanpur Nagar</u></a><br>
         <a style="color: aqua;" href="lucknow.html"><u>Lucknow</u></a><br>
-        <a style="color: aqua;" href="noida.html"><u>Noida/Ghaziabad/Faridabad/Gurgoan</u></a><br>
+        <a style="color: aqua;" href="noida.html"><u>Noida/Ghaziabad/Faridabad/Gurugram</u></a><br>
         <a style="color: aqua;" href="prayagraj.html"><u>Prayagraj</u></a><br>
         <a style="color: aqua;" href="varanasi.html"><u>Varanasi</u></a><br>
         <h4 style="color:gray;">More cities Coming Soon....</h4>
@@ -85,6 +111,21 @@
         <a style="color: aqua;" href="delhi.html"><u>Delhi</u></a><br>
 
     </div>
+    <script>
+        document.onreadystatechange = function() {
+            if (document.readyState !== "complete") {
+                document.querySelector(
+                  "body").style.visibility = "hidden";
+                document.querySelector(
+                  "#loader").style.visibility = "visible";
+            } else {
+                document.querySelector(
+                  "#loader").style.display = "none";
+                document.querySelector(
+                  "body").style.visibility = "visible";
+            }
+        };
+    </script>
     
    
 </body>
